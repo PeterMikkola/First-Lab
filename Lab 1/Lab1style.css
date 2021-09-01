@@ -3,7 +3,7 @@ html {
 }
 
 body{
-    background-image: url("images/Lab1back.jpg");
+    background-image: url("images/lab1back.jpg");
     width:fit-content;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 62.5%,
@@ -110,8 +110,6 @@ background-color: grey;
 }
 
 .fot {
-    font-size: 0.5;
-    background-color: white;
 column-count: 6;
     column-gap: 16px;
     column-fill: balance;
@@ -126,7 +124,6 @@ column-count: 6;
 }
 
 ul {
-    color: white;
     list-style-type: none;
     margin: 0;
     padding: 30px 10px;
