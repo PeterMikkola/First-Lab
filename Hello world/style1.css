@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+}
+p { 
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+}
+#imgcontainer {
+  max-width: 100%;
+  height: auto;
+    margin: 20px auto;
+    box-shadow: grey 2px 2px 7px;
+
+}
+
+figure {
+  max-width: auto;
+  height: 100%;
+  padding: 2px;
+  margin: auto;
+}
+
+figcaption {
+  background-color: black;
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  font-size: 36px;
+  text-align: center;
+}
+
+.figure {
+  display: grid;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+}
+.center-fit {
+  max-width: 100%;
+  max-height: 80vh;
+  margin: auto;
+}
+

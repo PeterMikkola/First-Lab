@@ -1,0 +1,181 @@
+html {
+    width: 100%;
+}
+
+body{
+    background-image: url("images/Lab1back.jpg");
+    width:fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%,
+}
+
+header {
+   
+width: 95%;
+color: black;
+opacity: 70%;
+background-color: grey;
+    margin: 25px auto;
+    border-radius: 50%;
+    max-height: 50px;
+  margin-bottom: 25px;
+  box-shadow: 10px 10px 8px darkslategrey;
+}
+
+
+p {
+    font-size: 1.2em;
+}
+
+
+    .nav {
+        color: black;
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+        color:darkslategrey;
+      
+
+      }
+
+
+h3 {
+    color: black;
+    font-size: 1.6em;
+    text-shadow: 2px 2px 7px darkslategray;
+    margin-bottom: 2px;
+}
+
+a {
+    font-size: 1.4em;
+    color: black;
+ 
+}
+main {
+    text-align: center;
+
+}
+#imgcontainer {
+    width: fit-content;
+    height: fit-content;
+    margin: 10px auto;
+
+}
+img {
+    border-radius: 8px;
+    position: relative;
+
+  }
+figure {
+    border-radius: 8px;      
+    width: 30%;
+    height: 30%;
+  margin: auto;
+  box-shadow: 10px 10px 8px grey;
+
+}
+
+figcaption {
+    margin-top: 5px;
+  background-color: black;
+  color: white;
+  font-style: italic;
+  font-size: 0.8em;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+
+}
+
+footer {
+            font-size: 0.5em;
+    width: 95%;
+    padding: 20px 20px;
+    margin: 25px auto;
+    line-height: 1.4;
+    opacity: 70%;
+background-color: grey;
+    border-radius: 50%;
+    text-align: center;
+  max-height: auto;
+  margin-bottom: 25px;
+  box-shadow: 10px 10px 8px darkslategrey;
+}
+
+.fot {
+    font-size: 0.5;
+    background-color: white;
+column-count: 6;
+    column-gap: 3px;
+    column-fill: balance;
+    -webkit-column-count: 6;
+       -moz-column-count: 6;
+       width: 55%;
+    padding: 5px 5px;
+    margin: auto;
+    text-align: center;
+
+}
+
+ul {
+    color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 30px 10px;
+}
+nav {
+    font-size: 1em;
+    position: absolute;
+    float: right;
+    bottom: 140px;
+    right: 20px;
+    padding: 0 10px;
+    font-family: 'Alegreya';
+    font-style: italic;
+    width: 240px;
+    height: 200px;
+    margin: 0px 10px 0 20px;
+    padding: 0;
+    text-align: right;
+    line-height: 1.6;
+    text-shadow: 2px 2px 7px grey;
+    z-index: 1;
+}
+
+/* unvisited link */
+a:link {
+    
+    color: black;
+    text-decoration: none;
+    font-size: 1.4em;
+    text-shadow: 2px 2px 5px darkslategray;
+
+
+}
+
+/* visited link */
+a:visited {
+    color: rgb(68, 0, 255);
+
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(68, 0, 255);
+    opacity: 100%;
+    font-size: 1.4em;
+    padding-right: 7px;
+    text-shadow: 2px 2px 5px darkslategray;
+}
+
+/* selected link */
+a:active {
+    color: yellow;
+}

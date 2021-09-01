@@ -1,0 +1,37 @@
+ol {
+	counter-reset: css-counter;
+	  list-style-type: none;
+	}
+	ol>li { 
+	  counter-increment: css-counter;
+	}
+	ol>li::before { 
+	  content: counters(css-counter, '.') ' - '; 
+	}
+
+/* This is HTML code of a list
+
+<ol>
+  <li>
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+  </li>
+  <li></li>
+  <li></li>
+  <li>
+     <ol>
+        <li></li>
+        <li>
+           <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+           </ol>
+        </li>
+      </ol>
+  </li>
+</ol>
+*/

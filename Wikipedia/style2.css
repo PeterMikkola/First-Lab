@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p { color: black;
+font-size: 14px;}
+
+h3 {
+  text-align: center;
+}
+
+nav {
+    background-color: #e8e8f0;
+    float: left;
+    width: 17%;
+    height: 60%;
+    padding: 15px;
+    font-size: 14px;
+    color: black;
+    border: rgb(156, 154, 154) solid 0.5px;
+}
+ol {
+  padding: 3px 15px 3px 15px; 
+
+}
+li {
+  padding: 3px;
+}
+ol {
+  counter-reset: css-counter;
+    list-style-type: none;
+  }
+  ol>li { 
+    counter-increment: css-counter;
+  }
+  ol>li::before { 
+    content: counters(css-counter, '.') ' - '; 
+  }
