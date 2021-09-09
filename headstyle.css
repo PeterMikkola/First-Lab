@@ -1,0 +1,185 @@
+html {
+  width: 100%;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  width: 95%;
+  height: 400px;
+  margin: 10px auto;
+  background-color: wheat;
+}
+
+/*.flex-container5 {
+	display: flex;
+	align-items: center;
+    justify-content: space-around;
+	flex-wrap: wrap;
+    text-align: center;
+}*/
+
+header {
+  background: linear-gradient(
+    to bottom,
+    grey 0%,
+    lightgrey 100%
+  ); /* Gradient same color as webpage*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  color: black;
+  padding: 10px 10px 10px;
+  margin: 15px auto 0px;
+  height: 106px;
+
+  /* Optional
+        box-shadow: 10px 10px 8px darkslategrey;
+      border-radius: 8px; */
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
+}
+
+.flex-item5 {
+  width: 100px;
+  height: 100px;
+  margin: 3px 10px 3px;
+}
+
+.flex-item6 {
+  width: 100px;
+  height: 100px;
+}
+/* Optional. This is CSS for header nav links.
+
+    .nav header {
+        color: black;
+        list-style-type: none;
+        text-align: center;
+        
+      }
+      
+      .nav header li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 10px;
+        color:darkslategrey;
+      } */
+
+/* .fotsub is bold subhead in footer */
+.fotsub {
+  color: black;
+  font-size: 1em;
+  font-weight: 700;
+  margin: auto;
+  text-align: left;
+}
+/* ul is list in footer */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 10px;
+}
+
+footer {
+  background: linear-gradient(
+    to top,
+    grey 0%,
+    lightgrey 100%
+  ); /* Gradient same color as webpage*/
+  justify-content: space-evenly;
+  display: flex;
+  font-size: 0.7em;
+  height: 100px;
+  width: 95%;
+  padding: 5px 20px;
+  margin: 10px auto;
+  line-height: 1.4;
+  text-align: center;
+
+  /* Optional
+        box-shadow: 10px 10px 8px darkslategrey;
+      border-radius: 8px; */
+}
+/* Here are flex for colums in footer. */
+* {
+  box-sizing: border-box;
+}
+
+.flex-container1 {
+  justify-content: space-evenly;
+
+  margin: 5px;
+  display: flex;
+}
+
+.flex-container2 {
+  justify-content: space-evenly;
+
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container3 {
+  justify-content: space-evenly;
+
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container4 {
+  justify-content: space-evenly;
+
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item {
+  text-align: left;
+
+  width: 200px;
+  height: 80px;
+  margin: 3px;
+}
+
+/* This css for links in footer*/
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px darkslategray;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(68, 0, 255);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(68, 0, 255);
+  padding-left: 7px;
+  text-shadow: 2px 2px 5px darkslategray;
+}
+
+/* selected link */
+a:active {
+  color: rgb(68, 0, 255);
+}
