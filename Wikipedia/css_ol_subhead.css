@@ -1,0 +1,60 @@
+/*< nav>
+            <h3>Innehåll</h3>
+            <ol>
+                <li>Taxonomi och utbredning
+                    <ol>
+                        <li>Underarter</li>
+                    </ol>
+                </li>
+                <li>Utseende</li>
+                <li>Ekologi
+                    <ol>
+                        <li>Biotop</li>
+                        <li>Föda</li>
+                        <li>Naturliga hoten</li>
+                    </ol>
+                <li>Pilgrimsfalken och människan
+                <ol>
+                    <li>Status och hot
+
+                    <ol>
+                        <li>Populationsnedgången under 1900-talet</li>
+                        <ol>
+                            <li>Central- och Östeuropa</li>
+                            <li>Skandinavien</li>
+                        </ol>
+                        
+                    </ol>
+                    <li>Namn</li>
+                    <ol></ol><li>Pilgrimsfalken i kulturen</li>
+                </ol>
+                    
+                        <li>Referenser
+                        <ol>
+                            <li>Noter</li>
+                            <li>Källor</li>
+                        </ol>
+                        <li>Externa länkar</li>
+                    </ol>
+                
+            
+        </nav> */
+
+
+ol {
+    padding: 3px 15px 3px 15px; 
+  
+  }
+  li {
+    padding: 3px;
+  }
+  ol {
+    counter-reset: css-counter;
+      list-style-type: none;
+    }
+    ol>li { 
+      counter-increment: css-counter;
+    }
+    ol>li::before { 
+      content: counters(css-counter, '.') ' - '; 
+    }
