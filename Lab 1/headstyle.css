@@ -17,6 +17,11 @@ main {
   background-color: wheat;
 }
 
+
+  img {
+    vertical-align: baseline;
+}
+
 /*.flex-container5 {
 	display: flex;
 	align-items: center;
@@ -26,7 +31,8 @@ main {
 }*/
 
 header {
-  background: linear-gradient(to bottom, grey 0%, lightgrey 100%);
+  /*background: linear-gradient(to bottom, grey 0%, lightgrey 100%);*/
+  background: linear-gradient(to bottom , #0099cc 0%, #99ffcc 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,10 +65,11 @@ h2 {
   margin: 3px 10px 0px;
 }
 
-.flex-item6 {
-  width: 100px;
+.flex-item7 {
+  width: 20%;
   height: 100px;
-  visibility: hidden;
+
+  /*visibility: hidden;*/
 }
 /* Optional. This is CSS for header nav links.
 
@@ -97,7 +104,8 @@ ul {
 }
 
 footer {
-  background: linear-gradient(to top, grey 0%, lightgrey 100%);
+  /*background: linear-gradient(to top, grey 0%, lightgrey 100%);*/
+  background: linear-gradient(to top , #0099cc 0%, #99ffcc 100%);
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;

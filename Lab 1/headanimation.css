@@ -1,15 +1,16 @@
-.animation-box {
-  width: 70%;
+.flex-item6 {
+  width: 55%;
   height: 300px;
-  /*background-color: blue; Uncheck to see borders of class*/
+ /* background-color: blue;*/
   margin-top: 70px;
   overflow: hidden;
   position: relative;
 }
 
 .animation-container {
-  width: 1000rem;
+  width: 75%;
   height: 30rem;
+  margin:auto;
 }
 
 @keyframes topFadeOut {
@@ -33,10 +34,10 @@
 .first-text {
     font-size: 2.4rem;
     position: absolute;
-    text-transform: uppercase;
+  text-transform: uppercase;
        text-align: center;
        text-shadow: 2px 2px 7px darkslategray;
-       left: 2.5rem;
+       top: 5rem;
        font-weight: 500;
     top: 30%;
     opacity: 100;
