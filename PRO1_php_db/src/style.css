@@ -65,6 +65,13 @@ fieldset {
   color: blue;
   border-color: rgb(228, 221, 221);
 }
+
+.fieldset {
+  margin: 5px 0px 0px;
+border: none;
+height: 30px;
+padding: 0px;
+}
   
   label {
     font-size: 0.8rem;
@@ -88,21 +95,33 @@ fieldset {
       cursor: pointer;
        border-radius: 50%;
        width: 18%;
-       background-color:green;
+       background-image: linear-gradient( green, rgb(38, 187, 38), green);
        color: white;
-       border:none;
+       border: none;
        float: left;
        text-align: center;
-       vertical-align: top;
        margin-right: 12px;
        font-size: 0.8rem;
+}
+
+.submit1 {
+  cursor: pointer;
+   border-radius: 50%;
+   width: 18%;
+   background-color: #8B1010;
+   color: white;
+   border: none;
+   float: right;
+   text-align: center;
+   margin: 0px 15px 0px;
+   font-size: 0.8rem;
 }
 
 .button {
   cursor: pointer;
    border-radius: 50%;
    width: 17%;
-   background-color:green;
+   background-image: linear-gradient( green, rgb(38, 187, 38), green);
    padding: 10px 24px;
    color: white;
    border:none;

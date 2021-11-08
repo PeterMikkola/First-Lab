@@ -21,8 +21,8 @@
 
 if(isset($_SESSION['username']))  {
 } else {
-header("location:admin.php");
-}
+redirect("../index.php");
+} 
 ?>
 
 <header>

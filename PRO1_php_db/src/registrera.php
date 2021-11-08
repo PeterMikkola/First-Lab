@@ -25,8 +25,6 @@
 $user_emailErr = $usernameErr = $passwordErr = "";
 $user_email = $username = $password = "";
 
-if(isset($_POST['submit'])) {
-    echo "It's working";
     
     
     if($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -138,7 +136,7 @@ if(isset($_POST['submit'])) {
         
     
     } 
-}
+
     
     ?>
                     

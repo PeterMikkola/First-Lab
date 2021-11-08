@@ -451,7 +451,8 @@ function register_user($username, $user_email, $password){
 
         confirmQuery($register_user_query);
         
-        redirect("admin");
+        //redirect("admin/index.php");
+        
 
         
 
@@ -509,11 +510,12 @@ function register_user($username, $user_email, $password){
              $_SESSION['password'] = $password;
 
             redirect("admin");
-
+            //return true;
 
          }  else {
-            redirect("index.php");
+            //redirect("index.php");
             //$error['password'] = 'Ogiltig inloggning. Försök igen!'; 
+            return false;
 
          }
              //echo "Ogiltig login";

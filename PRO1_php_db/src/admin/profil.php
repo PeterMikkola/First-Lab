@@ -2,6 +2,7 @@
 <?php ob_start(); ?>
 <?php include "../db.php"; ?>
 <?php include "../function.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,13 +17,13 @@
     
 </head>
 <body>
-<!-- <?php
+<?php
 
 if(isset($_SESSION['username']))  {
 } else {
-header("location:index.php");
-}
-?> -->
+redirect("../index.php");
+} 
+?>
 <header>
     <figure>
 <a href="profil.php">
@@ -60,29 +61,16 @@ header("location:index.php");
         $username = $row['username'];
         $password= $row['password'];
        
-
-    
-    
+ }
     }
-    
-
-}
-
-
-
-  
-    ?>
+ ?>
 <?php
 
   // Post request to update user 
    
-
-
-    
-   
 if(isset($_POST['edit_user'])) {
     
-         
+        $user_id      = escape($_POST['user_id']);
          $firstname   = escape($_POST['firstname']);
          $lastname    = escape($_POST['lastname']);
          $address     = escape($_POST['address']);
@@ -90,9 +78,6 @@ if(isset($_POST['edit_user'])) {
          $zipcode     = escape($_POST['zipcode']);
          $city        = escape($_POST['city']);
          $user_phone  = escape($_POST['user_phone']);
- 
-        // $post_image = $_FILES['image']['name'];
-        // $post_image_temp = $_FILES['image']['tmp_name'];
  
         $user_email    = escape($_POST['user_email']);
          $username      = escape($_POST['username']);
@@ -124,13 +109,13 @@ if(isset($_POST['edit_user'])) {
        $query .="firstname  = '$firstname', ";
        $query .="lastname = '$lastname', ";
        $query .="address   =  '$address', ";
-       $query .="zipcode   =  '{$zipcode}', ";
-       $query .="city   =  '{$city}', ";
-       $query .="user_phone = '{$user_phone}', ";
-       $query .="user_email = '{$user_email}', ";
-       $query .="username = '{$username}', ";
-       $query .="password   = '{$password}' ";
-       $query .= "WHERE user_id = {$user_id} ";
+       $query .="zipcode   =  '$zipcode', ";
+       $query .="city   =  '$city', ";
+       $query .="user_phone = '$user_phone', ";
+       $query .="user_email = '$user_email', ";
+       $query .="username = '$username', ";
+       $query .="password   = '$password' ";
+       $query .= "WHERE user_id = $user_id ";
     
     
          $edit_user_query = mysqli_query($connection,$query);
@@ -139,283 +124,91 @@ if(isset($_POST['edit_user'])) {
 
          echo "<p style='color:green; text-align: center; font-size: 18px;'>" . 'Dina uppgifter är uppdaterade' . "</p>";
 
-         //echo "Dina uppgifter är uppdaterade";
+         //echo "Dina uppgifter är uppdaterade"
+        
+        }  // if password empty check end
 
-   
+} // Post reques to update user end
 
-       
-
-          }  // if password empty check end
-
- 
-
-
-
-   
-     } // Post reques to update user end
-
-
-
-
-
- else {  // If the user id is not present in the URL we redirect to the home page
-
-
-     //header("Location: index.php");
+else {  // If the user id is not present in the URL we redirect to the home page
 
 
    }
-   if(isset($POST['delete'])){
 
-    if(isset($_SESSION['username'])) {
+   
+   if(isset($_POST['delete'])){
+//echo "Works!";
+    // if(isset($_SESSION['username'])) {
 
-        if($_SESSION['username'] == 'admin') {
+        //if($_SESSION['username'] == 'admin')   {  
 
-        $user_id = escape($POST['delete']);
+        $user_id = mysqli_real_escape_string($connection, $_POST['user_id']);
 
         $query = "DELETE FROM users WHERE user_id = {$user_id} ";
-        $delete_user_query = mysqli_query($connection, $query);
-        header("Location: admin");
+        $delete_user_query = mysqli_query($connection, $query); 
+        {
+          //success
+          //Set Refresh header using PHP.
+header( "refresh:4;url=../logout.php" );
+echo "<p style='color:#8B1010; text-align: center; font-size: 18px;'>" . 'Ditt konto är borttaget!' . "</p>";
+        } 
+         /* {
 
-            }   
+                echo 'query error; ' . mysqli_error($connection);
 
+        }  */
 
-        }
-   
-    
-    }
-    ?>
-
-    <!-- <form method="post">
-<input type="hidden" name="user_id" value="<?php echo $user_id ?>">
-
-    </form>
-   
-   <?php 
-   
-   //echo   '<input class="submit" value="Avsluta konto!" type="submit" name="delete"/>'
-
-?>
- -->
-<?php
-
-
-/* if($_SERVER['REQUEST_METHOD'] == "POST") {
-
-    $error = [
-    
-      'firstname'=> '',
-      'lastname'=> '',
-      'address'=> '',
-      'zipcode'=> '',
-      'city'=> '',
-      'user_phone'=> '',
-      'user_email'=>''
-  ];
-
-  if(!empty($firstname) && !empty($lastname ) && !empty($address )){                     
-    
-    
-   if($firstname ==''){
-    
-      $error['firstname'] = 'Fältet får inte vara tomt!';
-}
-    if (!preg_match_all('/[^\d]+/',$firstname)) {
-      $error['firstname'] = 'Bara bokstäver och mellanslag!';
-    }
-    
-  
-    foreach ($error as $key => $value) {
-            
-      if(empty($value)){
-
-        unset($error[$key]);
-
-      } */
-
-
-
-  // foreach
-
-  //if(empty($error)){
-    //register_user($username, $user_email, $password);
-
-      //$data['message'] = $username;
-
-     // $pusher->trigger('notifications', 'new_user', $data);
-
-      //login_user($username, $password);
-      
-      
-  /* 
-  
-
-}  */
-  
-  
-  
-  
-  
-   
-
-
-
-
-   
- 
- /*  
-// define variables and set to empty values
-$firstnameErr = $lastnameErr = $addressErr = $zipcodeErr = $cityErr = $user_phoneErr = $user_emailErr = $usernameErr = $passwordErr = "";
-$firstname = $lastname = $address = $zipcode = $city = $user_phone = $user_email = $username = $password = "";
-  
-$user_id = $_POST['user_id'] ?? '';
-$firstname = $_POST['firstname'] ?? '';
-$lastname = $_POST['lastname'] ?? '';
-$address = $_POST['address'] ?? ''; 
-$zipcode = $_POST['zipcode'] ?? '';
-$city = $_POST['city'] ?? '';
-$user_phone = $_POST['user_phone'] ?? '';
-$user_email = $_POST['user_email'] ?? ''; 
-$username = $_POST['username'] ?? '';
-$password = $_POST['password'] ?? '';
-
-
-function pro1($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-  } 
-
-  if($_SERVER['REQUEST_METHOD'] == "POST") {
-    if($firstname ==''){
-    
-      $error['firstname'] = 'Fältet får inte vara tomt!';
-
-
-  }
-   if (empty($_POST["firstname"])) {
-      $error = "Fältet får inte lämnas tomt!";
-    } else {
-      $firstname = pro1($_POST["firstname"]);
-      // check if name only contains letters and whitespace
-      if (!preg_match_all('/[^\d]+/',$firstname)) {
-        $error = "Bara bokstäver och mellanslag tillåtet!";
       }
-    }
-  
     
   
+      
+        ?>
+<fieldset class="fieldset">
+   
+   <form method="post" form id="delete"/>
+<ul>  
+<li><div style="display:flex; flex-direction: row; justify-content: left; align-items: center"></li>
+<li><input type="hidden" name="user_id" value="<?php echo $user_id ?>"></li></div>
+<li><?php echo '<input class="submit1" value="Avsluta konto!" type="submit" name="delete">'; ?></li>
+</ul>
+</form>
+    </fieldset>
 
-        if (empty($_POST["lastname"])) {
-          $lastnameErr = "Fältet får inte lämnas tomt!";
-        } else {
-          $lastname = pro1($_POST["lastname"]);
-          // check if name only contains letters and whitespace
-          if (!preg_match_all('/[^\d]+/',$lastname)) {
-            $lastnameErr = "Bara bokstäver och mellanslag tillåtet!";
-          }
-        }
-
-            if (empty($_POST["address"])) {
-              $addressErr = "Fältet får inte lämnas tomt!";
-            } else {
-              $address = pro1($_POST["address"]);
-              // check if name only contains letters and whitespace
-              if (!preg_match_all('/[^\d]+/',$address)) {
-                $addressErr = "Bara bokstäver och mellanslag tillåtet!";
-              }
-            }
-
-                if (empty($_POST["zipcode"])) {
-                  $zipcodeErr = "Fältet får inte lämnas tomt!";
-                } else {
-                  $zipcode = pro1($_POST["zipcode"]);
-                  // check if name only contains letters and whitespace
-                  if (!preg_match("@^([1-9][0-9 ]*)$@", $zipcode)) {
-                    $uzipcodeErr = "Bara siffror tillåtna!";
-                    }
-                
-                }
-                if (empty($_POST["city"])) {
-                  $cityErr = "Fältet får inte lämnas tomt!";
-                } else {
-                  $city = pro1($_POST["city"]);
-                  // check if name only contains letters and whitespace
-                  if (!preg_match_all('/[^\d]+/',$city)) {
-                    $cityErr = "Bara bokstäver och mellanslag tillåtet!";
-                  }
-                }
-            
-                    if (empty($_POST["user_phone"])) {
-                      $user_phoneErr = "Fältet får inte lämnas tomt!";
-                    } else {
-                      $user_phone = pro1($_POST["user_phone"]);
-                      // check if name only contains letters and whitespace
-                        if (!preg_match("@^([1-9][0-9 ]*)$@", $user_phone)) {
-                          $user_phoneErr = "Bara siffror tillåtna!";
-                          }
-                      }
-                    
-            
-                    if (empty($_POST["user_email"])) {
-                      $user_emailErr = "Fältet får inte lämnas tomt!";
-                    } else {
-                      $user_email = pro1($_POST["user_email"]);
-                      // check if e-mail address is well-formed
-                      if (!filter_var(FILTER_VALIDATE_EMAIL, $user_email)) {
-                        $user_emailErr = "Ogiltig e-post adress!";
-                      }
-                    }
-                      if (empty($_POST["username"])) {
-                          $usernameErr = "Fältet får inte lämnas tomt!";
-                        } else {
-                          $username = pro1($_POST["username"]);
-                          // check if name only contains letters and whitespace
-                          if (!preg_match_all('/[^\d]+/',$username)) {
-                            $usernamesErr = "Bara bokstäver och mellanslag tillåtet!";
-                          }
-                        }
-            
-                            if (empty($_POST["password"])) {
-                              $passwordErr = "Fältet får inte lämnas tomt!";
-                            } else {
-                              $password = pro1($_POST["password"]);
-                              // check if name only contains letters and whitespace
-                              if (!preg_match_all('/[^\d]+/',$password)) {
-                                $passwordErr = "Bara bokstäver och mellanslag tillåtet!";
-                              }
-                            
-                            }*/
-                          
-                                                       
- ?>
-      <fieldset>
+<fieldset>
 <legend>Fyll i dina uppgifter här! Tack <?php 
 if(isset($_SESSION['username'])) {
 echo $_SESSION['username'];
 }
 ?>!</legend>
-<form action="" method="post" enctype="multipart/form-data" />
+
+</form>
+<form method="post" />
 <ul>  
+
+<br>
+
+<div style="display:flex; flex-direction: row; justify-content: left; align-items: center">
+<li><label for="user_id">User Id:</label></li>
+<li><input type="text" id="user_id" name="user_id" value="<?php echo $user_id;?>" readonly>
+<span class="error">* Kan inte ändras!<?php echo isset($error['user_id']) ? $error['user_id'] : '' ?></span></li>
+</div>
 <div style="display:flex; flex-direction: row; justify-content: left; align-items: center">
 <li><label for="firstname">Förnamn:</label></li>
 <li><input type="text" id="firstname" name="firstname" value="<?php echo $firstname;?>">
 <span class="error">* <?php echo isset($error['firstname']) ? $error['firstname'] : '' ?></span></li>
-<input type="hidden" name="user_id" value="<?php echo $user_id ?>">
-<?php echo '<input class="submit" value="Avsluta konto!" style="background-color:red; type="submit" name="delete"/>' ?></div>
+</div>
 <div style="display:flex; flex-direction: row; justify-content: left; align-items: center">
-<li><label for="namn">Efternamn:</label></li>
+<li><label for="lastname">Efternamn:</label></li>
 <li><input type="text" id="lastname" name="lastname" value="<?php echo $lastname;?>">
 <span class="error">* <?php echo isset($error['lastname']) ? $error['lastname'] : '' ?></span></li>
 </div>
 <div style="display:flex; flex-direction: row; justify-content: left; align-items: center">
-<li><label for="farg">Gatuadress:</label></li>
+<li><label for="address">Gatuadress:</label></li>
 <li><input type="text" id="address" name="address" value="<?php echo $address;?>">
 <span class="error">* <?php echo isset($error['address']) ? $error['address'] : '' ?></span></li>
 </div>
 <div style="display:flex; flex-direction: row; justify-content: left; align-items: center">
-  <li><label for="hobby">Postnummer:</label></li>
+  <li><label for="zipcode">Postnummer:</label></li>
 <li><input type="text" id="zipcode" name="zipcode" value="<?php echo $zipcode;?>">
 <span class="error">* <?php echo isset($error['zipcode']) ? $error['zipcode'] : '' ?></span></li>
 </div>
@@ -431,24 +224,24 @@ echo $_SESSION['username'];
 </div>
 <div style="display:flex; flex-direction: row; justify-content: left; align-items: center">
   <li><label for="user_email">E-post:</label></li>
-<li><input type="text" id="user_email" name="user_email" value="<?php echo $user_email;?>"readonly>
-<span class="error">* Kan inte ändras!<?php echo isset($error['user_email']) ? $error['user_email'] : '' ?></span></li>
+<li><input type="text" id="user_email" name="user_email" value="<?php echo $user_email;?>">
+<span class="error">* <?php echo isset($error['user_email']) ? $error['user_email'] : '' ?></span></li>
 </div>
 <div style="display:flex; flex-direction: row; justify-content: left; align-items: center">
   <li><label for="username">Användarnamn:</label></li>
-<li><input type="text" id="username" name="username" value="<?php echo $username;?>"readonly>
+<li><input type="text" id="username" name="username" value="<?php echo $username;?>" readonly>
 <span class="error">* Kan inte ändras!<?php echo isset($error['username']) ? $error['username'] : '' ?></span></li>
 </div>
 <div style="display:flex; flex-direction: row; justify-content: left; align-items: center">
   <li><label for="password">Lösenord:</label></li>
-<li><input type="password" id="password" name="password" value="<?php echo $password;?>" readonly>
-<span class="error">* Kan inte ändras!<?php echo isset($error['password']) ? $error['password'] : '' ?></span></li>
+<li><input type="password" id="password" name="password" value="<?php echo $password;?>" >
+<span class="error">* <?php echo isset($error['password']) ? $error['password'] : '' ?></span></li>
 </div>
 
 <br />
 <br />
   <li><input class="submit" value="Dina uppgifter!" type="submit" name="edit_user"/></li>
-  <!-- <li><input class="button" value="Rensa" onclick="window.location=''" /></li>  -->
+  <li><input class="button" value="Rensa" onclick="window.location=''" /></li> 
   <br>
 </form>
 
