@@ -1,0 +1,13 @@
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('https://image.shutterstock.com/image-photo/sydney-australia-15-november-2016-600w-519876238.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+

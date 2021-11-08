@@ -1,0 +1,65 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #6a11cb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to top, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+table table-dark table-bordered mb-0 {
+    display:block;
+  width: 100%;
+  white-space: nowrap;
+color: #fff;
+}
+ a:link {
+ color: text-light !important;
+}
+p
+  {
+    color: #fff;
+  }
+
+table td,
+table th {
+color: #fff;
+max-width: 100px;
+text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+thead th,
+tbody th {
+  color: #fff;
+    width: 30%;
+    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+table td:nth-child(10),p
+  {
+    color:text-light !important;
+    }
+
+tbody td {
+  font-weight: 500;
+  color: rgba(255,255,255,.65);
+}
+.table-responsive a:link 
+{
+    color:text-light !important;
+    }
+
+#page-wrapper {
+  background-color: #b6b6af;
+}

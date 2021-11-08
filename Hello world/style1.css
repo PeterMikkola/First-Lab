@@ -40,4 +40,8 @@ figcaption {
   max-height: 80vh;
   margin: auto;
 }
+.button {
+  cursor: pointer;
+
+}
 

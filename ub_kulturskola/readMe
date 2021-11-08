@@ -1,0 +1,49 @@
+Hej Sebastian!
+
+Det har inte gått bra för mig. Jag är i det närmaste förtvivlad. Det är Söndag eftermiddag och jag har 
+inte fått min PHP utvecklingsmiljö att fungera alls. Jag förstår ingenting. Hur svårt kan det vara?
+Som jag skrev till dig tidigare i min fråga om installation av PHP så sa du att jag skulle vänta. 
+Så jag gjorde som du sa och installerade Docker.
+
+Jag installerade Docker och PHP och upptäckte då att det var en gammal version. 7.3.
+Alltså inte den näst sista utan den näst, näst sista. Googlade för att få 
+en förklaring och såg då massor med inlägg från folk som har varit med om samma fel. Här kan det vara 
+OS X inbyggda version som spökade.
+
+Jag vill precis som du själv nämnde att vi ska ha PHP 8.0.
+Jag gjorde då en tabbe och försökte uppgradera med Homebrew men misslyckades. 
+
+Vill bara säga att den här veckan har alltså varit en katastrof och ett totalt misslyckande var det 
+gällde själva uppgiften.
+Att installera en utvecklingsmiljö för PHP samt kod. MEN däremot har jag lärt mig mer under den här veckan 
+än på många år sammantaget. Jag har praktiskt taget bott i terminalen, ett ställe jag försökt hålla mig ifrån
+i rädsla för att jag ska skriva fel och förstöra något. 
+Jag har googlat om saker jag inte hade en aning om för någon månad sedan och lärt mig detta t ex.
+
+VSCode terminal och macens terminal synkar inte. Jag har suttit och kodat i två olika versioner. 
+VSCodes terminal visar alltid den inbygda mjukvaran, httpd, även om man installerat en senare extern version, (Läs Brew)
+
+När jag installerat PHP med Homebrew fungerade det fortfarande inte. Googlade och lärde mig
+att original httpd i OS X fungerar inte med Brew PHP. Installerade då Brew httpd. Fungerade fortfarande inte.
+Tog fram min gamla dator och gjorde en ny installation av Docker. Fungerade inte. Felmeddelande i terminalen.
+Gick till Docker Desktop, gjorde Purge. Datorn hängde sig. Kunde inte göra några som helst kommandon i Docker.
+Avinstallerade och går en annan väg.
+
+Vidare har jag lärt mig att min nya mac, ARM med processor M1, har en annan sökväg /opt/homebrew istället för 
+Intel mac /usr/local.
+Jag är inte hundra på att det är det här som är felet, men jag ska ta reda på det. 
+
+Jag har konfigurerat alla filer som det står. Flera gånger, från flera olika siter. Det här verkar vara orsaken då. 
+Andra med samma problem har portat om alla sidor i alla nedladdningar de har gjort från Homebrew. Brew har tydligen
+själva skrivit ett skript för detta. 
+
+Jag bifogar ett litet PHP projekt jag gjorde för några år sedan. Inte för att någon då bad mig 
+utan för att se om jag kunde. Eftersom jag inte kan se resultatet nu är det säkert massor med fel, 
+men du kanske kan få en uppfattning om att jag kan producera ett litet web formulär.
+kultur_enkat.php är själva sidan.
+
+Jag har alltså installerat PHP sen flera år tillbaka, men dessa sortens installationer var alltså nya för mig.
+Söndag kväll. Gjorde en ny installation på gamla Intel datorn. Brew PHP och HTTPD. Config efter alla konstens regler
+nu kan jag nästan alla parametrar utantill i httpd.conf. Nu funkar inta ens localhost från System root. 
+Jag har verkligen krigat den här veckan men nu är jag helt slut och måste nog erkänna att jag
+fixar inte det här utan hjälp.

@@ -1,0 +1,116 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 100%;
+background-image: url(img/bg.png);
+}
+
+p {
+  font-size: 1rem;
+  color: darkslategrey;
+  text-transform: none;
+
+}
+header {
+
+  text-align: right;
+  width: 95%;
+  height: 50px;
+}
+
+figure {
+  float: right;
+  width: 10%;
+  text-align: center;
+}
+main {
+  border-top: 0.5px solid grey;
+  border-left: 0.5px solid grey;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 50%;
+  height: auto;
+  margin: 40px auto;
+  background-color: rgb(150, 145, 145);
+  background-image: radial-gradient(circle, white, lightgrey, darkgrey);
+  box-shadow: 10px 10px 8px grey;
+  border-radius: 8px;      
+
+}
+
+ul {
+  list-style-type: none;
+  margin:10px;
+  padding: 10px;
+  overflow: hidden;
+  
+}
+
+li {
+    list-style: none;
+  text-transform: uppercase;
+  text-indent: 5px;
+  
+}
+
+
+.error {color: #FF0000;
+  font-size: 0.8rem;
+}
+
+fieldset {
+  text-transform: uppercase;
+  height: auto;
+
+  margin: 30px;
+  color: blue;
+  border-color: rgb(228, 221, 221);
+}
+  
+  label {
+    font-size: 0.8rem;
+    color: blue;
+    clear: both;
+    float:left;
+        width: 8rem;
+      margin-right: 1em;
+      vertical-align: baseline;     }
+
+    input {
+      float:left;
+      height: 25px;
+      width: 150px;
+      padding: 5px;
+      margin: 5px 0;
+    }
+
+
+     .submit {
+      cursor: pointer;
+       border-radius: 50%;
+       width: 18%;
+       background-color:green;
+       color: white;
+       border:none;
+       float: left;
+       text-align: center;
+       vertical-align: top;
+       margin-right: 12px;
+       font-size: 0.8rem;
+}
+
+.button {
+  cursor: pointer;
+   border-radius: 50%;
+   width: 17%;
+   background-color:green;
+   padding: 10px 24px;
+   color: white;
+   border:none;
+   float: left;
+   text-align: center;
+   margin-right: 12px;
+   font-size: 0.8rem;
+}
+
+
+

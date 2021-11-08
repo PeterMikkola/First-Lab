@@ -1,0 +1,181 @@
+html {
+    
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(lightgrey, grey, lightgrey);
+}
+
+#wrapper {
+    border-top: 0.5px solid darkslategray;
+    margin: 3% auto;
+    width: 85%;
+    height: 850px;
+    background-image: url(images/bg.png);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+
+
+}
+
+header {
+
+    width: 80%;
+    margin: 0 auto;
+    background-color: yellow;
+}
+    main {
+        width: 80%;
+        height: 60%;
+        background-color: green;
+        margin: 0 auto;
+        color:white;
+        text-align: center;
+}
+
+/*footer {
+    background-image: linear-gradient(to top,black, lightgrey);
+    height: 40px;
+    margin: 20px 16px 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px darkslategrey;
+
+}*/
+
+.container-fluid {
+    background-image: linear-gradient(to bottom,black, lightgrey);
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px darkslategrey;
+    margin: 20px;
+}
+.navbar navbar-expand-lg navbar-dark bg-black {
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+width: 80%;
+}
+
+.dropdown-menu li>a{color:black; }
+
+
+/* .fotsub is bold subhead in footer */
+
+.fotsub {
+	color: white;
+	font-size: 1em;
+	font-weight: 700;
+	margin: auto;
+	text-align: left;
+}
+
+
+/* ul is list in footer */
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0px 10px;
+}
+
+footer {
+    border-top: 0.5px solid darkslategray;
+    background-image: linear-gradient(to top,black, lightgrey);
+	justify-content: space-evenly;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 0.7em;
+	height: 100px;
+	width: 93%;
+	padding: 5px 20px;
+	margin: 10px auto 20px;
+	line-height: 1.4;
+	text-align: center;
+	/* Properties below is optional*/
+	box-shadow: 10px 10px 8px darkslategrey;
+	border-radius: 8px;
+}
+
+
+/* Here are flex for colums in footer. */
+
+* {
+	box-sizing: border-box;
+}
+
+.flex-container1 {
+	
+        color: white;
+      justify-content: space-evenly;
+	margin: 5px;
+	display: flex;
+}
+
+.flex-container2 {
+	justify-content: space-evenly;
+	margin: 5px;
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-container3 {
+	justify-content: space-evenly;
+	margin: 5px;
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-container4 {
+	justify-content: space-evenly;
+	margin: 5px;
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-item {
+	text-align: left;
+	width: 200px;
+	height: 80px;
+	margin: 3px;
+}
+
+/* unvisited link*/ 
+
+a:link {
+	color: white;
+	text-decoration: none;
+	text-shadow: 2px 2px 5px darkslategray;
+}
+
+
+/* visited link */
+
+a:visited {
+	color: rgb(255, 251, 0);
+}
+
+
+/* mouse over link */
+
+a:hover {
+	color: rgb(68, 0, 255);
+	padding-left: 7px;
+	text-shadow: 2px 2px 5px darkslategray;
+}
+
+
+/* selected link */
+
+a:active {
+	color: rgb(68, 0, 255);
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+

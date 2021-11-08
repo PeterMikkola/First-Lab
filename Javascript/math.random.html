@@ -1,0 +1,30 @@
+for (let i = 0; i < 100; i++) {
+    console.log("Ett slumpmäsigt tal mellan 0-1 ", Math.random());
+    let siffraMellan = 1 + Math.floor(Math.random() * 9);
+    let bildNamn = "image-" + siffraMellan + ".png";
+    bildElement.src = bildNamn;
+    console.log(bildNamn);
+}
+
+
+
+
+//En for-loop består i sin mest grundläggande form av tre argument
+//let i = 0; <-- deklarerar en variabel som vi kallar för i
+//i < 10; <-- ett argument eller en regel som säger att "så länge i är mindre än 10, kör loopen igen".
+for (let i = 0; i < 10; i++) {
+    
+    //Skapar ett nytt html-element av typen <img>
+    let newImageElement = document.createElement("img");
+    
+    //Skapar en ny textsträng där jag väljer ett slumpmässigt tal mellan 0-9
+    let randomImageSrc = "image-" + Math.floor(Math.random() * 10) + ".jpg";
+    
+    //Sätter det nya elementets src attribut till den nyskapade strängen.
+    //Det kommer då att se ut exempelvis såhär <img src="image-7.jpg">
+    newImageElement.src = randomImageSrc;
+    //Slutligen så lägger jag till det nyskapade elementet till documentets <body>
+    //Här skulle vi ju såklart kunna hitta ett annat element än body att lägga 
+    //till våra nyskapade bilder med hjälp av document.getElementById('container-element');
+    document.body.appendChild(newImageElement);
+}
